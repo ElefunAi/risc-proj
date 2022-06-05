@@ -15,8 +15,8 @@ test:
 
 .PHONY: build
 build:
-	iverilog $(INPUT_FILES) -s $(TOP_MODULE) -o $(OUT_FILE)
-
+	iverilog $(INPUT_FILES) -I $(VSRC_DIR) -s $(TOP_MODULE) -o $(OUT_FILE) -g2012
+	
 .PHONY: run
 run: build
 	./$(OUT_FILE)
