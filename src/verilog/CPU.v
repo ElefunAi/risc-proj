@@ -22,6 +22,7 @@ module decoder (
     assign opcode = inst[6:0];
     assign rd = inst[11:7];
     assign funct3 = inst[14:12];
+    assign funct7 = inst[31:25];
     assign rs1 = inst[19:15];
     assign rs2 = inst[24:20];
 
