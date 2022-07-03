@@ -1,4 +1,16 @@
-// decorderモジュールが参照
+// decoderモジュールが参照
+// RV32Iのみ(例外処理もなし)
+
+// 命令の識別
+`define LOAD    4'd0
+`define LOAD    4'd1
+`define LOAD    4'd2
+`define LOAD    4'd3
+`define LOAD    4'd4
+`define LOAD    4'd5
+`define LOAD    4'd6
+`define LOAD    4'd7
+`define LOAD    4'd8
 
 // EXE
 `define ALU_X    5'd0
@@ -21,16 +33,32 @@
 `define ALU_JALR 5'd17
 
 // op1
-`define
+`define OP1_RS1  2'd0
+`define OP1_PC   2'd1
+`define OP1_X    2'd2
+`define OP1_IMZ  2'd3
 
 // op2
-`define
+`define OP2_X    3'd0
+`define OP2_RS2  3'd1
+`define OP2_IMI  3'd2
+`define OP2_IMS  3'd3
+`define OP2_IMJ  3'd4
+`define OP2_IMU  3'd5
 
 // mem_wen
-`define
+`define MEN_X   2'0
+`define MEN_S   2'1
+// `define MEN_V   2'2
 
 // rf_wen
-`define
+
+`define REN_X   2'd0
+`define REN_S   2'd1
+// `define REN_V   2'd2
 
 // wb_sel
-`define
+`define WB_X      2'd0
+`define WB_ALU    2'd1
+`define WB_MEM    2'd2
+`define WB_PC     2'd3
