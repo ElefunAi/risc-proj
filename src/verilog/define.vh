@@ -2,15 +2,15 @@
 // RV32Iのみ(例外処理もなし)
 
 // 命令の識別
-`define LOAD    4'd0
-`define LOAD    4'd1
-`define LOAD    4'd2
-`define LOAD    4'd3
-`define LOAD    4'd4
-`define LOAD    4'd5
-`define LOAD    4'd6
-`define LOAD    4'd7
-`define LOAD    4'd8
+`define LDST    4'd0
+`define ADD     4'd1
+`define SUB     4'd2
+`define LOGIC   4'd3
+`define SHIFT   4'd4
+`define CMP     4'd5
+`define BRANCH  4'd6
+`define JMP     4'd7
+`define LDDI    4'd8
 
 // EXE
 `define ALU_X    5'd0
