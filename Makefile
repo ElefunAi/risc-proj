@@ -5,7 +5,7 @@ VSRC_DIR = ./src/verilog
 BUILD_DIR = ./build
 $(shell mkdir -p $(BUILD_DIR))
 
-INPUT_FILES = ./src/verilog/ALU.v ./src/verilog/CPU.v
+INPUT_FILES = ./src/verilog/ALU.v ./src/verilog/CPU.v ./src/verilog/pc.v
 #INPUT_FILES = $(wildcard $(VSRC_DIR)/*.v)
 OUT_FILE = $(BUILD_DIR)/$(TOP_MODULE).out
 
