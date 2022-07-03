@@ -15,11 +15,11 @@ test:
 	@echo $(INPUT_FILES)
 
 .PHONY: build
-build:
+$(OUT_FILE): $(INPUT_FILES)
 	iverilog $(INPUT_FILES) -I $(VSRC_DIR) -s $(TOP_MODULE) -o $(OUT_FILE)
 	
 .PHONY: run
-run: build
+run: $(OUT_FILE)
 	./$(OUT_FILE)
 
 .PHONY: clean
