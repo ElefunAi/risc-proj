@@ -19,18 +19,3 @@
 `define BR_BLTU  5'd15
 `define BR_BGEU  5'd16
 `define ALU_JALR 5'd17
-
-// op1
-`define
-
-// op2
-`define
-
-// mem_wen
-`define
-
-// rf_wen
-`define
-
-// wb_sel
-`define

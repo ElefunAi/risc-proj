@@ -1,4 +1,3 @@
 module CPU;
-    initial $display (32'hFFFFFFF0+1);
-    initial $display (32'hFFFFFFF1>>>1);
+    initial $display (3'd6 + 3'd1);
 endmodule
