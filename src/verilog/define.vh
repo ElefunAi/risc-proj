@@ -2,15 +2,15 @@
 // RV32Iのみ(例外処理もなし)
 
 // 命令の識別
-`define LDST    4'd0
-`define ADD     4'd1
-`define SUB     4'd2
-`define LOGIC   4'd3
-`define SHIFT   4'd4
-`define CMP     4'd5
-`define BRANCH  4'd6
-`define JMP     4'd7
-`define LDDI    4'd8
+`define LUI     7'b0110111
+`define AUIPC   7'b0010111
+`define JAL     7'b1101111
+`define JALR    7'b1100111
+`define BRANCH  7'b1100011
+`define LW      7'b0010111
+`define STORE   7'b0100011
+`define OPIMI   7'b0010011 //OPERATION IMIDIATE
+`define OPRS2   7'b0110011 //OPERATION RS2
 
 // EXE
 `define ALU_X    5'd0
@@ -47,8 +47,8 @@
 `define OP2_IMU  3'd5
 
 // mem_wen
-`define MEN_X   2'0
-`define MEN_S   2'1
+`define MEN_X   2'd0
+`define MEN_S   2'd1
 // `define MEN_V   2'2
 
 // rf_wen
