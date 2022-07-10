@@ -1,5 +1,4 @@
 module CPU;
-<<<<<<< HEAD
 
     wire clk;
     wire [4:0] exe_fn;
