@@ -18,4 +18,3 @@
 `define BR_BGE   5'd14
 `define BR_BLTU  5'd15
 `define BR_BGEU  5'd16
-`define ALU_JALR 5'd17

@@ -47,6 +47,7 @@
 `define LUI    31'bxxxxxxxxxxxxxxxxxxxxxxxxx0110111
 `define AUIPC  31'bxxxxxxxxxxxxxxxxxxxxxxxxx0010111
 
+// ここから下は実装なし
 // CSR
 `define CSRRW  31'bxxxxxxxxxxxxxxxxx001xxxxx1110011
 `define CSRRWI 31'bxxxxxxxxxxxxxxxxx101xxxxx1110011
