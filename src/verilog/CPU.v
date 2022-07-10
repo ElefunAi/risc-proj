@@ -30,7 +30,8 @@ module CPU;
 
     jump_controller jump_controller (
         .exe_fn(exe_fn),
-        .default_target(rs2_data),
+        .rs1_data(rs1_data),
+        .rs2_data(rs2_data),
         .jump_flag(jump_flag),
         .jump_target(jump_target),
     );
