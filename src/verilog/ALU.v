@@ -47,28 +47,6 @@ module ALU (
     wire [31:0] sltu_out;
     assign sltu_out = (rs1_data < rs2_data) ? 32'b1 : 32'b0;
 
-    // 条件分岐
-    wire [31:0] beq_out;
-    assign beq_out = (rs1_data == rs2_data) ? 32'b1 : 32'b0;
-
-    wire [31:0] bne_out;
-    assign beq_out = (rs1_data != rs2_data) ? 32'b1 : 32'b0;
-
-    wire [31:0] blt_out;
-    assign blt_out = ($signed(rs1_data) < $signed(rs2_data)) ? 32'b1 : 32'b0;
-
-    wire [31:0] bge_out;
-    assign blt_out = ($signed(rs1_data) > $signed(rs2_data)) ? 32'b1 : 32'b0;
-    
-    wire [31:0] bltu_out;
-    assign blt_out = (rs1_data < rs2_data) ? 32'b1 : 32'b0;
-
-    wire [31:0] bgeu_out;
-    assign blt_out = (rs1_data > rs2_data) ? 32'b1 : 32'b0;
-
-    wire [31:0] jalr_out;
-    assign jalr_out = (rs1_data + rs2_data) & ~32'b1;
-
     always @(*) begin
         case (alu_fn)
             `ALU_X    : out <= 0;
