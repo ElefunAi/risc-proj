@@ -39,6 +39,7 @@ module jump_controller (
             `BR_BGE   : jump_flag_reg <= bge_out;
             `BR_BLTU  : jump_flag_reg <= bltu_out;
             `BR_BGEU  : jump_flag_reg <= bgeu_out;
+            `ALU_JALR : jump_flag_reg <= 1'b1;
             default   : jump_flag_reg <= 1'b0;
         endcase
         case (exe_fn)
