@@ -60,13 +60,6 @@ module ALU (
             `ALU_SRA  : out <= sra_out;
             `ALU_SLT  : out <= slt_out;
             `ALU_SLTU : out <= sltu_out;
-            `BR_BEQ   : out <= beq_out;
-            `BR_BNE   : out <= bne_out;
-            `BR_BLT   : out <= blt_out;
-            `BR_BGE   : out <= bge_out;
-            `BR_BLTU  : out <= bltu_out;
-            `BR_BGEU  : out <= bgeu_out;
-            `ALU_JALR : out <= jalr_out;
             default  : out <= 0;
         endcase
     end
