@@ -33,10 +33,10 @@
 `define ALU_JALR 5'd17
 
 // op1
-`define OP1_RS1  2'd0
-`define OP1_PC   2'd1
-`define OP1_X    2'd2
-// `define OP1_IMZ  2'd3　<= CSR命令にて必要
+`define OP1_X    2'd0
+`define OP1_RS1  2'd1
+`define OP1_PC   2'd2
+//`define OP1_IMZ  2'd3
 
 // op2
 `define OP2_X    3'd0
