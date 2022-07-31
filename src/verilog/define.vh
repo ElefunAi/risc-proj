@@ -47,14 +47,14 @@
 `define OP2_IMU  3'd5
 
 // mem_wen
-`define MEN_X   2'd0
-`define MEN_S   2'd1
+`define MEN_X   1'd0
+`define MEN_S   1'd1
 // `define MEN_V   2'2
 
 // rf_wen
 
-`define REN_X   2'd0
-`define REN_S   2'd1
+`define REN_X   1'd0
+`define REN_S   1'd1
 // `define REN_V   2'd2
 
 // wb_sel

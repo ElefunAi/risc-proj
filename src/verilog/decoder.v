@@ -4,7 +4,8 @@ module decoder (
     output wire [31:0] imm,
     output wire [4:0] op1_addr, op2_addr, rd_addr,
     output wire [4:0] exe_fun,
-    output wire [1:0] op1, mem_wen, rf_wen
+    output wire mem_wen, rf_wen,
+    output wire [1:0] op1,
     output wire [2:0] op2, wb_sel
 );
     // 宣言
@@ -30,7 +31,7 @@ module decoder (
     // デコーダが渡すもの
     // exe_fun(演算内容),op1(第1オペランド),op2(第2オペランド),mem_wen(メモリenable),
     // rf_wen(ライトバックenable),wb_sel(ライトバックデータセレクタ)
-    // wb_selでWB_ALUするのは、reg_fileのレジスタへ書き戻すことを表す
+    // wb_selで例えばWB_ALUは、ALUの出力をレジスタへ書き戻すことを表す
     // つまり、reg_fileにとってはWB_ALU & rf_wen(Write ENable)がenable信号
     // reg_fileに対して=>32bit op1_addr, op2_addr, rd_addr, imm(即値)
     assign op1_addr = inst[19:15];
