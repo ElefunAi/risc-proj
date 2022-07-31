@@ -3,11 +3,11 @@ module jump_controller (
     input wire [31:0] rs1_data,
     input wire [31:0] rs2_data,
     output wire jump_flag,
-    output wire [31:0] jump_target,
+    output wire [31:0] jump_target
 );
 
-    reg jump_flag_reg,
-    reg [31:0] jump_target_reg,
+    reg jump_flag_reg;
+    reg [31:0] jump_target_reg;
 
     // 条件分岐
     wire beq_out;
@@ -31,7 +31,7 @@ module jump_controller (
     wire [31:0] jalr_out;
     assign jalr_out = (rs1_data + rs2_data) & ~32'b1;
 
-    always @(*) begin
+    always @(exe_fn) begin
         case (exe_fn)
             `BR_BEQ   : jump_flag_reg <= beq_out;
             `BR_BNE   : jump_flag_reg <= bne_out;
