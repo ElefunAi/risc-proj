@@ -1,3 +1,4 @@
+`include "define.vh"
 module reg_decode_reg_file (
     input wire clk,
     input wire [4:0] op1_addr, op2_addr,

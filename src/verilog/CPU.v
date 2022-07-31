@@ -29,9 +29,9 @@ wire [31:0] mem_write_addr;
 wire [31:0] mem_write_data;
 wire [31:0] mem_out;
 
-assign reg_write_value = (wb_sel == WB_ALU) ? alu_out :
-                         (wb_sel == WB_MEM) ? mem_out :
-                         (wb_sel == WB_PC)  ? pc      : 32'd0 ;
+assign reg_write_value = (wb_sel == `WB_ALU) ? alu_out :
+                         (wb_sel == `WB_MEM) ? mem_out :
+                         (wb_sel == `WB_PC)  ? pc      : 32'd0 ;
     
 PC PC (.clk(clk),
     .jump_flag(jump_flag),

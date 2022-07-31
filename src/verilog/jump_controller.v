@@ -1,3 +1,4 @@
+`include "define.vh"
 module jump_controller (
     input wire [4:0] exe_fn,
     input wire [31:0] rs1_data,
