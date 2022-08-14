@@ -1,6 +1,7 @@
 `include "define.vh"
 module reg_decode_reg_file (
     input wire clk,
+    input wire reset,
     input wire [4:0] op1_addr, op2_addr,
     input wire [31:0] pc, imm,
     input wire [1:0] op1,
@@ -15,8 +16,15 @@ module reg_decode_reg_file (
 
     reg [31:0] reg_file [0:31];
     reg [31:0] rs1_data_reg, rs2_data_reg;
-    always @(posedge clk) begin
-        if (write_en) begin
+    integer idx;
+    always @(posedge clk) begin : reg_loop
+        if (reset) begin
+            for (idx = 0; idx < 32 ; idx = idx+1) begin
+               reg_file[idx] <= 32'b0; 
+            end
+            disable reg_loop;
+        end
+        else if (write_en) begin
             reg_file[write_addr] <= write_value;
         end
 

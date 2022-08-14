@@ -1,5 +1,5 @@
 module PC (
-    input wire clk,
+    input wire clk,reset,
     input wire jump_flag,
     input wire [31:0] jump_target,
     output wire [31:0] pc
@@ -7,6 +7,9 @@ module PC (
     reg [31:0] pc_reg;
 
     always @(posedge clk) begin
+        if (reset) begin
+            pc_reg <= 32'b0;
+        end
         pc_reg <= (jump_flag) ? jump_target : pc + 4;
     end
 
