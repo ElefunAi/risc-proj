@@ -9,7 +9,7 @@ module mem (
     reg [31:0] read_reg;
 
     initial begin
-        $readmemh("./src/hex/inst.hex", rom);
+        $readmemh("./src/hex/c.hex", rom);
     end
     
     always @(posedge clk) begin

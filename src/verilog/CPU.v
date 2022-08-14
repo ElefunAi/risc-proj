@@ -1,6 +1,8 @@
 `include "define.vh"
 
-module CPU;
+module CPU(
+    input wire clk, reset
+);
 initial begin
     $display("hello");
 end
