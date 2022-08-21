@@ -8,10 +8,13 @@ $(shell mkdir -p $(BUILD_DIR))
 INPUT_FILE_NAMES = \
 	ALU.v \
 	CPU.v \
-	pc.v \
+	data_mem.v \
+	decoder.v \
+	inst_mem.v \
+	instruction.v \
 	jump_controller.v \
-	reg_decode_reg_file.v \
-	mem.v
+	pc.v \
+	reg_decode_reg_file.v
 
 INPUT_FILES = $(addprefix $(VSRC_DIR)/,$(INPUT_FILE_NAMES))
 $(addprefix src/,$(FILES))  
