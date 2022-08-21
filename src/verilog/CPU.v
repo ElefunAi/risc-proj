@@ -3,9 +3,6 @@
 module CPU(
     input wire clk, reset
 );
-initial begin
-    $display("hello");
-end
 
 wire clk;
 wire jump_flag;
@@ -35,7 +32,9 @@ assign reg_write_value = (wb_sel == `WB_ALU) ? alu_out :
                          (wb_sel == `WB_MEM) ? mem_out :
                          (wb_sel == `WB_PC)  ? pc      : 32'd0 ;
     
-PC PC (.clk(clk),
+PC PC (
+    .clk(clk),
+    .reset(reset),
     .jump_flag(jump_flag),
     .jump_target(jump_target),
     .pc(pc)
@@ -72,6 +71,7 @@ jump_controller jump_controller (
 
 reg_decode_reg_file reg_decode_reg_file (
     .clk(clk),
+    .reset(reset),
     .op1_addr(op1_addr),
     .op2_addr(op2_addr),
     .pc(pc),
