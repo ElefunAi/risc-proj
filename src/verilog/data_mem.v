@@ -1,5 +1,5 @@
 // memoryモジュール
-module mem (
+module data_mem (
     input wire clk,
     input wire write_en,
     input wire [31:0] addr,

@@ -11,28 +11,33 @@ module computer_tb;
 parameter HALFCYCLE = 0.5; //500ns
 parameter CYCLE = 1;
   reg reset, clk;
+  reg [31:0] pc;
+  wire [31:0] read_data;
+  mem instmem (.clk(clk), .addr(pc), .read_data(read_data));
   CPU riscv (.clk(clk), .reset(reset));
 
   integer idx;    //step数のカウント
   always #HALFCYCLE clk = ~clk;
   initial begin
+    pc <= 0;
     clk = 1;
     reset = 1;
     // ここでモジュールの出力を保存する
     $dumpfile("comp.vcd");
-    $dumpvars(0, U0);
+    $dumpvars(0, riscv);
 
-    // テストプログラム(アセンブル済み)をROM32Kの配列mに詰め込む
-    $readmemb("../hex/c.hex", U0.rom.m);
+    // 命令のload
     for (idx = 0; idx < 32; idx = idx + 1) begin
-      $display("%4d: %b", idx, U0.rom.m[idx]);
+      #CYCLE pc <= pc+4;
+      $display("%4d: %h", idx, read_data);
     end
-    // どうも内部のwireまで参照することが可能
-    $monitor("%4dns clock=%d pc=%d I=%d A=%d D=%d M=%d", $stime, clk, U0.pc, U0.inst, U0.dataaddr, U0.cpu.outD, U0.datain);
-    // #CYCLE reset = 1;
+
+    // 計算結果を参照
+    $monitor("pc=%d inst=%d data_addr=%d =%d M=%d", pc, U0.inst, U0.dataaddr, U0.cpu.outD, U0.datain);
+    
     // リセット信号は代入されないので、手動で下げる
     #CYCLE     reset = 0;
   end
 
-  initial #1800 $finish;
+  initial #8000 $finish;
 endmodule

@@ -3,9 +3,6 @@
 module CPU(
     input wire clk, reset
 );
-initial begin
-    $display("hello");
-end
 
 wire clk;
 wire jump_flag;
