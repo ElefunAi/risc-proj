@@ -13,7 +13,7 @@ parameter CYCLE = 1;
   reg reset, clk;
   reg [31:0] pc;
   wire [31:0] read_data;
-  mem instmem (.clk(clk), .addr(pc), .read_data(read_data));
+  inst_mem instmem (.clk(clk), .addr(pc), .read_data(read_data));
   CPU riscv (.clk(clk), .reset(reset));
 
   integer idx;    //step数のカウント
@@ -33,7 +33,7 @@ parameter CYCLE = 1;
     end
 
     // 計算結果を参照
-    $monitor("pc=%d inst=%d data_addr=%d =%d M=%d", pc, U0.inst, U0.dataaddr, U0.cpu.outD, U0.datain);
+    $monitor("pc=%d inst=%d rs1_addr=%d rs1_data=%d rs2_addr=%d rs2_data=%d", pc, riscv.inst_out, riscv.op1_addr, riscv.rs1_data, riscv.op2_addr, riscv.rs2_data);
     
     // リセット信号は代入されないので、手動で下げる
     #CYCLE     reset = 0;
