@@ -17,8 +17,11 @@ parameter CYCLE = 1;
   CPU riscv (.clk(clk), .reset(reset));
 
   integer idx;    //step数のカウント
+  integer FP;
   always #HALFCYCLE clk = ~clk;
   initial begin
+    FP = $fopen("monitor2.log");
+    #CYCLE
     pc <= 0;
     clk = 1;
     reset = 1;
@@ -26,15 +29,15 @@ parameter CYCLE = 1;
     $dumpfile("comp.vcd");
     $dumpvars(0, riscv);
 
-    // 命令のload
-    for (idx = 0; idx < 32; idx = idx + 1) begin
-      #CYCLE pc <= pc+4;
-      $display("%4d: %h", idx, read_data);
-    end
-
     // 計算結果を参照
-    $monitor("pc=%d inst=%d rs1_addr=%d rs1_data=%d rs2_addr=%d rs2_data=%d", pc, riscv.inst_out, riscv.op1_addr, riscv.rs1_data, riscv.op2_addr, riscv.rs2_data);
-    
+    // for (idx = 0; idx < 6600; idx = idx + 1) begin
+    //   #CYCLE $fdisplay(FP, "%4dns clock=%d pc=%d inst=%d rs1_addr=%d rs1_data=%d rs2_addr=%d rs2_data=%d", $stime, clk, riscv.pc, riscv.inst_out, riscv.op1_addr, riscv.rs1_data, riscv.op2_addr, riscv.rs2_data);
+      // $display("%4d: %h", idx, read_data);
+      // $fdisplay(FP, "%4d: %h", idx, read_data);
+    // end
+    #CYCLE reset = 1;
+    $fmonitor(FP, "%4dns clock=%d pc=%d inst=%h rs1_addr=%d rs1_data=%d rs2_addr=%d rs2_data=%d", $stime, clk, riscv.pc, riscv.inst_out, riscv.op1_addr, riscv.rs1_data, riscv.op2_addr, riscv.rs2_data);
+
     // リセット信号は代入されないので、手動で下げる
     #CYCLE     reset = 0;
   end

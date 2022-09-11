@@ -4,7 +4,6 @@ module CPU(
     input wire clk, reset
 );
 
-wire clk;
 wire jump_flag;
 wire [31:0] jump_target;
 wire [31:0] pc;
