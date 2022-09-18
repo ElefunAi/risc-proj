@@ -34,23 +34,23 @@ Z6 o-work work
 Z7 tCvgOpt 0
 n@a@l@u
 vcomputer_tb
-Z8 !s110 1662869318
+Z8 !s110 1663472501
 !i10b 1
-!s100 0;XjjjT^46j;SoLnRI18@3
+!s100 :oT?^1T3e?;mV1k=nnB3W2
 R2
-I=J0<m22BGlKJ`HKN7F0VK2
+I=BWAPi=W_Rm[`LK[0`9fe3
 R3
 R0
-w1662869307
+w1663472488
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v
-!i122 80
+!i122 84
 L0 10 37
 R5
 r1
 !s85 0
 31
-Z9 !s108 1662869318.000000
+Z9 !s108 1663472501.000000
 !s107 define.vh|CPU.v|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v|
 Z10 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v|
 !i113 1
@@ -67,7 +67,7 @@ R0
 w1661051623
 8CPU.v
 FCPU.v
-!i122 80
+!i122 84
 L0 3 99
 R5
 r1
@@ -127,25 +127,25 @@ Z13 !s108 1661051580.000000
 R6
 R7
 vinst_mem
-R1
+!s110 1663471599
 !i10b 1
-!s100 aaQEWX_k:iU^WloBhj9?<0
+!s100 TF7bjGFM3NiK9dGlg`B]90
 R2
-IJjE5L;:_bdm>7WREdej0N0
+I>g9hZZCeSBn;a6a9oK=Yz2
 R3
 R0
-R12
-Z14 8inst_mem.v
-Z15 Finst_mem.v
-!i122 52
-Z16 L0 2 22
+w1663471297
+8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/inst_mem.v
+FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/inst_mem.v
+!i122 82
+Z14 L0 2 22
 R5
 r1
 !s85 0
 31
-R13
-Z17 !s107 inst_mem.v|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v|
-Z18 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v|
+!s108 1663471599.000000
+!s107 C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/inst_mem.v|
+!s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/inst_mem.v|
 !i113 1
 R6
 R7
@@ -167,8 +167,8 @@ r1
 !s85 0
 31
 R13
-R17
-R18
+Z15 !s107 inst_mem.v|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v|
+Z16 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v|
 !i113 1
 R6
 R7
@@ -204,17 +204,17 @@ I62ZYT24o8Zezc86ZBFX3d2
 R3
 R0
 w1660444590
-R14
-R15
+8inst_mem.v
+Finst_mem.v
 !i122 43
-R16
+R14
 R5
 r1
 !s85 0
 31
 !s108 1660447683.000000
-R17
-R18
+R15
+R16
 !i113 1
 R6
 R7
