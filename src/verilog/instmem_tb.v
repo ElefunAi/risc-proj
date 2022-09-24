@@ -3,7 +3,6 @@
 /*      for risc-v proj      */ 
 /*  Written by Ryotaro Funai */
 /*****************************/
-`include "inst_mem.v"
 `timescale 1 us/ 100 ns
 `default_nettype none
 

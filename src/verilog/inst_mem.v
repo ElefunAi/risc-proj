@@ -9,7 +9,7 @@ module inst_mem (
     reg [7:0] read_reg0, read_reg1, read_reg2, read_reg3;
 
     initial begin
-        $readmemb("../hex/test2.bin", rom);
+        $readmemb("./src/hex/test2.bin", rom);
     end
     
     always @(posedge clk) begin
