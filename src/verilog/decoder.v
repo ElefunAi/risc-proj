@@ -5,8 +5,8 @@ module decoder (
     output wire [4:0] op1_addr, op2_addr, rd_addr,
     output reg [4:0] exe_fun,
     output reg mem_wen, rf_wen,
-    output reg [1:0] op1,
-    output reg [2:0] op2, wb_sel
+    output reg [1:0] op1, wb_sel,
+    output reg [2:0] op2
 );
     // 宣言
     // 内部信号

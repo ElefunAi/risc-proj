@@ -7,10 +7,8 @@ module PC (
     reg [31:0] pc_reg;
 
     always @(posedge clk) begin
-        if (reset) begin
-            pc_reg <= 32'b0;
-        end
-        pc_reg <= (jump_flag) ? jump_target : pc + 4;
+        if (reset) pc_reg <= 32'b0;
+        else pc_reg <= (jump_flag) ? jump_target : pc + 4;
     end
 
     assign pc = pc_reg;

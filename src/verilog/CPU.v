@@ -4,7 +4,6 @@ module CPU(
     input wire clk, reset
 );
 
-wire clk;
 wire jump_flag;
 wire [31:0] jump_target;
 wire [31:0] pc;
@@ -15,17 +14,17 @@ wire [31:0] rs2_data;
 wire [31:0] alu_out;
 
 wire [4:0] op1_addr, op2_addr;
+wire [31:0] inst_out;
 wire [31:0] imm;
 wire [1:0] op1;
 wire [2:0] op2;
-wire wb_sel;
+wire [2:0] wb_sel;
 wire reg_write_en;
 wire [4:0] reg_write_addr;
 wire [31:0] reg_write_value;
 
 wire mem_write_en;
 wire [31:0] mem_write_addr;
-wire [31:0] mem_write_data;
 wire [31:0] mem_out;
 
 assign reg_write_value = (wb_sel == `WB_ALU) ? alu_out :
@@ -41,7 +40,7 @@ PC PC (
 );
 
 decoder decoder(
-    .inst(read_data),
+    .inst(inst_out),
     .imm(imm),
     .op1_addr(op1_addr),
     .op2_addr(op2_addr),
@@ -85,18 +84,18 @@ reg_decode_reg_file reg_decode_reg_file (
     .rs2_data(rs2_data)
 );
 
-data_mem ram (
+data_mem data_mem (
     .clk(clk),
     .write_en(mem_write_en),
-    .addr(mem_write_addr),
-    .write_data(mem_write_data),
+    .addr(alu_out),
+    .write_data(rs2_data),
     .read_data(mem_out)
 );
 
-inst_mem rom (
+inst_mem inst_mem (
     .clk(clk),
     .addr(pc),
-    .read_data(mem_out)
+    .read_data(inst_out)
 );
 
 endmodule

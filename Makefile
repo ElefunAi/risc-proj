@@ -5,19 +5,7 @@ VSRC_DIR = ./src/verilog
 BUILD_DIR = ./build
 $(shell mkdir -p $(BUILD_DIR))
 
-INPUT_FILE_NAMES = \
-	ALU.v \
-	CPU.v \
-	data_mem.v \
-	decoder.v \
-	inst_mem.v \
-	instruction.v \
-	jump_controller.v \
-	pc.v \
-	reg_decode_reg_file.v
-
-INPUT_FILES = $(addprefix $(VSRC_DIR)/,$(INPUT_FILE_NAMES))
-$(addprefix src/,$(FILES))  
+VSRCS = $(wildcard ${VSRC_DIR}/*.v)
 #INPUT_FILES = $(wildcard $(VSRC_DIR)/*.v)
 OUT_FILE = $(BUILD_DIR)/$(TOP_MODULE).out
 
