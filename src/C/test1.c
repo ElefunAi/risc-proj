@@ -1,7 +1,7 @@
 int main() {
-    int a = 3;
-    int b = 5;
-    int c;
+    volatile int a = 3;
+    volatile int b = 5;
+    volatile int c;
     c = a + b;
-    return 0;
+    return c;
 }
