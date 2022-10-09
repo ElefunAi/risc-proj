@@ -28,5 +28,5 @@ parameter CYCLE = 1;
     #CYCLE     reset = 0;
   end
 
-  initial #10 $finish;
+  initial #20 $finish;
 endmodule

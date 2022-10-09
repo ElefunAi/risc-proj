@@ -18,7 +18,7 @@ wire [31:0] inst_out;
 wire [31:0] imm;
 wire [1:0] op1;
 wire [2:0] op2;
-wire [2:0] wb_sel;
+wire [1:0] wb_sel;
 wire reg_write_en;
 wire [4:0] reg_write_addr;
 wire [31:0] reg_write_value;

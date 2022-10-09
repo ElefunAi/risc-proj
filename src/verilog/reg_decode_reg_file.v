@@ -16,33 +16,30 @@ module reg_decode_reg_file (
 
     reg [31:0] reg_file [0:31];
     reg [31:0] rs1_data_reg, rs2_data_reg;
-    integer idx;
-    always @(posedge clk) begin : reg_loop
+
+    always @(posedge clk) begin
         if (reset) begin
-            for (idx = 0; idx < 32 ; idx = idx+1) begin
-               reg_file[idx] <= 32'b0; 
-            end
-            disable reg_loop;
+            reg_file[0] <= 32'b0; 
         end
         else if (write_en) begin
-            reg_file[write_addr] <= write_value;
+            reg_file[write_addr] = write_value;
         end
 
         case (op1)
-            `OP1_X      : rs1_data_reg <= 32'b0;
-            `OP1_RS1    : rs1_data_reg <= reg_file[op1_addr];
-            `OP1_PC     : rs1_data_reg <= pc;
-            default     : rs1_data_reg <= 32'bx;
+            `OP1_X      : rs1_data_reg = 32'b0;
+            `OP1_RS1    : rs1_data_reg = reg_file[op1_addr];
+            `OP1_PC     : rs1_data_reg = pc;
+            default     : rs1_data_reg = 32'bx;
         endcase
 
         case (op2)
-            `OP2_X      : rs2_data_reg <= 32'b0;
-            `OP2_RS2    : rs2_data_reg <= reg_file[op2_addr];
+            `OP2_X      : rs2_data_reg = 32'b0;
+            `OP2_RS2    : rs2_data_reg = reg_file[op2_addr];
             `OP2_IMI,
             `OP2_IMS,
             `OP2_IMJ,
-            `OP2_IMU    : rs2_data_reg <= imm;
-            default     : rs2_data_reg <= 32'bx;
+            `OP2_IMU    : rs2_data_reg = imm;
+            default     : rs2_data_reg = 32'bx;
         endcase
 
     end

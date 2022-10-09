@@ -67,7 +67,7 @@ def main ():
             pattern = r"inst=[0-9a-fx]* "
             result = re.compile(pattern).search(line)
             if result is None:
-                raise
+                continue
             inst_hex = result.group().replace("inst=", "").replace(" ", "")
             if inst_hex == "xxxxxxxx":
                 f.write("Not define instruction xxxxxxxx.\n")
