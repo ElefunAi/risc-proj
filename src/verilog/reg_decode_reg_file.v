@@ -25,24 +25,24 @@ module reg_decode_reg_file (
             disable reg_loop;
         end
         else if (write_en) begin
-            reg_file[write_addr] <= write_value;
+            reg_file[write_addr] = write_value;
         end
 
         case (op1)
-            `OP1_X      : rs1_data_reg <= 32'b0;
-            `OP1_RS1    : rs1_data_reg <= reg_file[op1_addr];
-            `OP1_PC     : rs1_data_reg <= pc;
-            default     : rs1_data_reg <= 32'bx;
+            `OP1_X      : rs1_data_reg = 32'b0;
+            `OP1_RS1    : rs1_data_reg = reg_file[op1_addr];
+            `OP1_PC     : rs1_data_reg = pc;
+            default     : rs1_data_reg = 32'bx;
         endcase
 
         case (op2)
-            `OP2_X      : rs2_data_reg <= 32'b0;
-            `OP2_RS2    : rs2_data_reg <= reg_file[op2_addr];
+            `OP2_X      : rs2_data_reg = 32'b0;
+            `OP2_RS2    : rs2_data_reg = reg_file[op2_addr];
             `OP2_IMI,
             `OP2_IMS,
             `OP2_IMJ,
-            `OP2_IMU    : rs2_data_reg <= imm;
-            default     : rs2_data_reg <= 32'bx;
+            `OP2_IMU    : rs2_data_reg = imm;
+            default     : rs2_data_reg = 32'bx;
         endcase
 
     end

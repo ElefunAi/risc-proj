@@ -11,9 +11,9 @@ module data_mem (
     reg [31:0] read_reg;
 
     // 初期化どうする？
-    // initial begin
-    //     $readmemh("./src/hex/inst.hex", rom);
-    // end
+    initial begin
+        $readmemh("./src/hex/lw.hex", rom);
+    end
     
     always @(posedge clk) begin
         read_reg <= rom[addr];

@@ -36,10 +36,11 @@ parameter CYCLE = 1;
       // $fdisplay(FP, "%4d: %h", idx, read_data);
     // end
     #CYCLE reset = 1;
-    $monitor(FP, "%4dus clock=%d pc=%d inst=%h rs1_addr=%d rs1_data=%d rs2_addr=%d rs2_data=%d reg_write_addr=%d reg_write_val=%d", $stime, clk, riscv.pc, riscv.inst_out, riscv.op1_addr, riscv.rs1_data, riscv.op2_addr, riscv.rs2_data, riscv.reg_write_addr, riscv.reg_write_value);
-
     // リセット信号は代入されないので、手動で下げる
     #CYCLE     reset = 0;
+    $fmonitor(FP, "%4dus clock=%d pc=%d inst=%h rs1_addr=%d rs1_data=%h rs2_addr=%d rs2_data=%h val=%h", $stime, clk, riscv.pc, riscv.inst_out, riscv.op1_addr, riscv.reg_decode_reg_file.rs1_data, riscv.op2_addr, riscv.reg_decode_reg_file.rs2_data, riscv.reg_decode_reg_file.write_value);
+
+
   end
 
   initial #8000 $finish;

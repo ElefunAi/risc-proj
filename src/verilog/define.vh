@@ -7,7 +7,7 @@
 `define JAL     7'b1101111
 `define JALR    7'b1100111
 `define BRANCH  7'b1100011
-`define LW      7'b0010111
+`define LW      7'b0000011
 `define STORE   7'b0100011
 `define OPIMI   7'b0010011 //OPERATION IMIDIATE
 `define OPRS2   7'b0110011 //OPERATION RS2

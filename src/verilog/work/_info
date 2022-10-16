@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog
 vALU
-Z1 !s110 1661051580
+Z1 !s110 1665287308
 !i10b 1
 !s100 P]ZQR4MGF<BFkCiL[V3=?0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,135 +20,135 @@ R0
 Z4 w1661051254
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/ALU.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/ALU.v
-!i122 47
+!i122 116
 L0 8 55
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1661051579.000000
+Z6 !s108 1665287308.000000
 !s107 define.vh|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/ALU.v|
 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/ALU.v|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z7 o-work work
+Z8 tCvgOpt 0
 n@a@l@u
 vcomputer_tb
-Z8 !s110 1663472501
+Z9 !s110 1665287307
 !i10b 1
-!s100 :oT?^1T3e?;mV1k=nnB3W2
+!s100 j=5HJYX:^U:_MFfBlm>_c3
 R2
-I=BWAPi=W_Rm[`LK[0`9fe3
+IZfDZGinDkO42LJkQi<ZC:2
 R3
 R0
-w1663472488
+w1665284225
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v
-!i122 84
-L0 10 37
+!i122 109
+L0 10 38
 R5
 r1
 !s85 0
 31
-Z9 !s108 1663472501.000000
+Z10 !s108 1665287307.000000
 !s107 define.vh|CPU.v|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v|
-Z10 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v|
 !i113 1
-R6
 R7
-vCPU
 R8
+vCPU
+R1
 !i10b 1
-!s100 H0Mjj_=4BVVj`VBbJQGgd2
+!s100 LPAC^YI5M2U?CPj6UK@_>1
 R2
-IFf9Q1RjbF=DmP^C`BFgX31
+ILka6AjjG_b;obD24DT@IZ1
 R3
 R0
-w1661051623
-8CPU.v
-FCPU.v
-!i122 84
+w1663474112
+8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/CPU.v
+FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/CPU.v
+!i122 113
 L0 3 99
 R5
 r1
 !s85 0
 31
-R9
-Z11 !s107 define.vh|CPU.v|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/cpu_tb.v|
-R10
-!i113 1
 R6
+!s107 define.vh|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/CPU.v|
+!s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/CPU.v|
+!i113 1
 R7
+R8
 n@c@p@u
 vdata_mem
-!s110 1662868134
+R9
 !i10b 1
-!s100 OJ]OcE2Zb3WFAXPOI?g=?2
+!s100 b@PW88iLjmZU;D9SBfLQo3
 R2
-I91CoRc3h6d?iFlB=M``_M3
+IzY59Z5M7F:>Y6BknWZ7Cd0
 R3
 R0
-w1662868110
+w1665285151
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/data_mem.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/data_mem.v
-!i122 75
+!i122 108
 L0 2 25
 R5
 r1
 !s85 0
 31
-!s108 1662868134.000000
+R10
 !s107 C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/data_mem.v|
 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/data_mem.v|
 !i113 1
-R6
 R7
+R8
 vdecoder
-R1
+R9
 !i10b 1
-!s100 82m<N?LbWhKU^1G>c@XJk0
+!s100 V3F<Y6Fz2gg2;:I3h64IQ3
 R2
-I;1IiRXo<8am?H_O=O3Ef_3
+IGnY1kKEL8o_JG^j;Egc=:1
 R3
 R0
-Z12 w1661051381
+w1665282693
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/decoder.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/decoder.v
-!i122 50
+!i122 111
 L0 2 378
 R5
 r1
 !s85 0
 31
-Z13 !s108 1661051580.000000
+R10
 !s107 define.vh|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/decoder.v|
 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/decoder.v|
 !i113 1
-R6
 R7
+R8
 vinst_mem
-!s110 1663471599
+R1
 !i10b 1
-!s100 TF7bjGFM3NiK9dGlg`B]90
+!s100 cWVkMT6hlI]EaC=KdIe=R3
 R2
-I>g9hZZCeSBn;a6a9oK=Yz2
+Ih8<7RA>eh[CzG^G7Y9bWW1
 R3
 R0
-w1663471297
-8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/inst_mem.v
-FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/inst_mem.v
-!i122 82
-Z14 L0 2 22
+w1665284170
+Z11 8inst_mem.v
+Z12 Finst_mem.v
+!i122 115
+Z13 L0 2 22
 R5
 r1
 !s85 0
 31
-!s108 1663471599.000000
-!s107 C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/inst_mem.v|
-!s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/inst_mem.v|
-!i113 1
 R6
+Z14 !s107 inst_mem.v|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v|
+Z15 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v|
+!i113 1
 R7
+R8
 vinstmem_tb
 R1
 !i10b 1
@@ -157,21 +157,21 @@ R2
 IYlkQ[9MmUii9:oDf=9nd@0
 R3
 R0
-R12
+w1661051381
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v
-!i122 52
+!i122 115
 L0 10 22
 R5
 r1
 !s85 0
 31
-R13
-Z15 !s107 inst_mem.v|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v|
-Z16 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/instmem_tb.v|
-!i113 1
 R6
+R14
+R15
+!i113 1
 R7
+R8
 vjump_controller
 R1
 !i10b 1
@@ -183,18 +183,18 @@ R0
 R4
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/jump_controller.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/jump_controller.v
-!i122 53
+!i122 117
 L0 2 54
 R5
 r1
 !s85 0
 31
-R13
+R6
 !s107 define.vh|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/jump_controller.v|
 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/jump_controller.v|
 !i113 1
-R6
 R7
+R8
 vmem
 !s110 1660447683
 !i10b 1
@@ -204,64 +204,64 @@ I62ZYT24o8Zezc86ZBFX3d2
 R3
 R0
 w1660444590
-8inst_mem.v
-Finst_mem.v
+R11
+R12
 !i122 43
-R14
+R13
 R5
 r1
 !s85 0
 31
 !s108 1660447683.000000
+R14
 R15
-R16
 !i113 1
-R6
 R7
+R8
 vPC
-!s110 1662867459
+R1
 !i10b 1
-!s100 a0Ebz<6keQk=4B<j2T;Kb0
+!s100 A=EhYQib_mBD3oE4^8R_?0
 R2
-I=>5dm2I;Wn>>L<El@aU`P1
+IhZ`MDMbWd61E=1di4o9En2
 R3
 R0
-w1662867421
+w1662867526
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/pc.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/pc.v
-!i122 72
-L0 1 18
+!i122 114
+L0 1 16
 R5
 r1
 !s85 0
 31
-!s108 1662867459.000000
+R6
 !s107 C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/pc.v|
 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/pc.v|
 !i113 1
-R6
 R7
+R8
 n@p@c
 vreg_decode_reg_file
 R1
 !i10b 1
-!s100 c<c<OH;S4B2c67ibHSd9B0
+!s100 LZ]=XZoT6YM27EJ<8QE_l2
 R2
-IQh^J74fQFNdfIC=8Vg44o1
+I`IOW5EF:4Ie>NB80;g^ki3
 R3
 R0
-R12
+w1665277792
 8C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/reg_decode_reg_file.v
 FC:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/reg_decode_reg_file.v
-!i122 55
+!i122 112
 L0 2 52
 R5
 r1
 !s85 0
 31
-R13
+R10
 !s107 define.vh|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/reg_decode_reg_file.v|
 !s90 -reportprogress|300|-work|work|C:/Users/RF-PC/Documents/GitHub/risc-proj/src/verilog/reg_decode_reg_file.v|
 !i113 1
-R6
 R7
+R8
