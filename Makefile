@@ -6,7 +6,7 @@ BUILD_DIR = ./build
 $(shell mkdir -p $(BUILD_DIR))
 
 VSRCS = $(wildcard ${VSRC_DIR}/*.v)
-#INPUT_FILES = $(wildcard $(VSRC_DIR)/*.v)
+
 OUT_FILE = $(BUILD_DIR)/$(TOP_MODULE).out
 
 .PHONY: build
