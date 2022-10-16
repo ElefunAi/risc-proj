@@ -1,6 +1,6 @@
 int main() {
-    volatile int a = 3;
-    volatile int b = 5;
+    volatile int a = 10;
+    volatile int b = 8;
     volatile int c;
     c = a + b;
     return c;
