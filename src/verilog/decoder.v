@@ -40,9 +40,9 @@ module decoder (
     // 即値の扱い方 risc-v ISA manual参照(P.24)
     assign imm = (opcode == `LUI || opcode == `AUIPC) ? {inst[31:12], 12'd0} : // U-format
                  (opcode == `JAL) ? {{11{inst[31]}},inst[31],inst[19:12],inst[20],inst[30:21],1'd0} : // J-format
-                 (opcode == `JALR || opcode == `LW || opcode == `OPIMI) ? {{19{inst[31]}},inst[31],inst[30:25],inst[24:21],inst[20]} : // I-format
+                 (opcode == `JALR || opcode == `LW || opcode == `OPIMI) ? {{20{inst[31]}},inst[31],inst[30:25],inst[24:21],inst[20]} : // I-format
                  (opcode == `BRANCH) ? {{18{inst[31]}},inst[31],inst[7],inst[30:25],inst[11:8],1'd0} : //B-format
-                 (opcode == `STORE) ? {{19{inst[31]}},inst[31],inst[30:25],inst[11:8],inst[7]} : 32'd0;// ? S-format : R-format(即値なし)
+                 (opcode == `STORE) ? {{20{inst[31]}},inst[31],inst[30:25],inst[11:8],inst[7]} : 32'd0;// ? S-format : R-format(即値なし)
 
     always @(*) begin
         case (opcode)

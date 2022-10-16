@@ -16,13 +16,11 @@ module reg_decode_reg_file (
 
     reg [31:0] reg_file [0:31];
     reg [31:0] rs1_data_reg, rs2_data_reg;
-    integer idx;
-    always @(posedge clk) begin : reg_loop
+
+    always @(posedge clk) begin
         if (reset) begin
-            for (idx = 0; idx < 32 ; idx = idx+1) begin
-               reg_file[idx] <= 32'b0; 
-            end
-            disable reg_loop;
+            reg_file[0] <= 32'b0; //ゼロレジスタ
+            reg_file[2] <= 32'h100; //sp スタックポイント
         end
         else if (write_en) begin
             reg_file[write_addr] = write_value;

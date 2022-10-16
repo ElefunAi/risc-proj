@@ -14,10 +14,10 @@ module ALU (
 
     // 算術演算
     wire [31:0] add_out;
-    assign add_out = $signed(rs1_data) + $signed(rs2_data);
+    assign add_out = rs1_data+rs2_data;
 
     wire [31:0] sub_out;
-    assign sub_out = $signed(rs1_data) - $signed(rs2_data);
+    assign sub_out = rs1_data-rs2_data;
     
     // 論理演算
     wire [31:0] and_out;

@@ -1,2 +1,7 @@
 build
 .vscode
+work
+*.vcd
+*.log
+*.out
+*.wlf
